@@ -32,9 +32,9 @@
 <section class="text-gray-600 body-font bg-indigo-900">
     <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font  sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Gardiennage
+            <h1 class="title-font  sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Etoil Gard
             </h1>
-            <p class="mb-8 leading-relaxed text-gray-900 text-xl "> Consiste en un service de surveillance humaine (par opposition à un système de surveillance électronique) assuré par des agents de sécurité. Ces derniers ont principalement pour mission de protéger des locaux, des personnes, et des biens. Il existe différents types d’agents de sécurité ayant chacun leurs spécificités : Agent de Prévention et Sécurité (APS), agent évènementiel, agent incendie, rondier intervenant, agent cynophile (ou maître-chien).</p>
+            <p class="mb-8 leading-relaxed text-gray-900 text-xl "> </p>
 
         </div>
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -120,23 +120,32 @@
                 </div>
             </div>
         </div>
-        <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contacter Nous </h2>
-            <p class="leading-relaxed mb-5 text-gray-600">Nos services sont pour vous 24/7.</p>
-            <div class="relative mb-4">
-                <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-                <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
+            @csrf
+            <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contacter Nous </h2>
+                <p class="leading-relaxed mb-5 text-gray-600">Nos services sont pour vous 24/7.</p>
+                @if(Session::has('contact_sent'))
+                    <div class="alert alert-success"  role="alert">
+                        {{Session::get('contact_sent')}}
+                    </div>
+                @endif
+                <div class="relative mb-4">
+                    <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative mb-4">
+                    <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                    <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                </div>
+                <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg">Send</button>
             </div>
-            <div class="relative mb-4">
-                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <div class="relative mb-4">
-                <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-            </div>
-            <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg">Send</button>
-        </div>
+        </form>
+
     </div>
 </footer>
 </html>
