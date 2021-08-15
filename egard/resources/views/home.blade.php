@@ -120,11 +120,12 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
-            @csrf
+
             <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
                 <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contacter Nous </h2>
                 <p class="leading-relaxed mb-5 text-gray-600">Nos services sont pour vous 24/7.</p>
+                <form method="POST" action="{{ route('contact.send') }}" enctype="multipart/form-data">
+                    @csrf
                 @if(Session::has('contact_sent'))
                     <div class="alert alert-success"  role="alert">
                         {{Session::get('contact_sent')}}
@@ -143,8 +144,8 @@
                     <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
                 <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-900 rounded text-lg">Send</button>
+                </form>
             </div>
-        </form>
 
     </div>
 </footer>
