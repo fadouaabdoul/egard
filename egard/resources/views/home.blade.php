@@ -34,21 +34,31 @@
         <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 class="title-font  sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Etoil Gard
             </h1>
-            <p class="mb-8 leading-relaxed text-gray-900 text-xl "> </p>
+            <p class="mb-8 leading-relaxed text-gray-900 text-xl ">Etoile Gard est une société de nettoyage de tous types d'infrastructures, Lorsque vous nous appeler, qu'il s'agisse ou non d'une urgence de nettoyage, nous nous engageons à venir vous assister dans les plus brefs délais. </p>
 
         </div>
         <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <img class="object-cover object-center rounded" alt="hero" src="{{ asset('asset/secure2.png') }}" >
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 </section>
 <!----features---->
 
 <section class="text-gray-600 body-font">
+
+    <br>
+    <br>
+    <div class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 text-center">
+        <h1> Nos Services </h1>
+    </div>
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
         <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img alt="feature" class="object-cover object-center h-full w-full" src="{{ asset('asset/service.png') }}">
         </div>
+
         <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             <div class="flex flex-col mb-10 lg:items-start items-center">
                 <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
