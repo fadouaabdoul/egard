@@ -51,65 +51,69 @@
 
     <br>
     <br>
-    <div class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 text-center">
-        <h1> Nos Services </h1>
-    </div>
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-        <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
-            <img alt="feature" class="object-cover object-center h-full w-full" src="{{ asset('asset/service.png') }}">
+    <div id="service">
+        <div class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900 text-center">
+            <h1> Nos Services </h1>
         </div>
 
-        <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                    </svg>
-                </div>
-                <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Nettoyage') }}</h2>
-                    <p class="leading-relaxed text-base"> Service de nettoyages :
-                        <br> - Nettoyage de bureaux et surfaces commerciales
-                        <br> - Nettoyage des copropriétés
-                        <br> - Nettoyage des vitres
-                        <br> - Nettoyage des façades
-                        <br> - Nettoyage fin de chantier
-                        <br> - Nettoyage fin travaux ou occasionnels
-                        <br> - Sortie des conteneurs (poubelles)
-                        <br> - Nettoyage des cantonnements (bungalows)
-                        <br> - Débarras
-                        <br> - Traitement des sols.</p>
-
-                </div>
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                <img alt="feature" class="object-cover object-center h-full w-full" src="{{ asset('asset/service.png') }}">
             </div>
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <circle cx="6" cy="6" r="3"></circle>
-                        <circle cx="6" cy="18" r="3"></circle>
-                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                    </svg>
-                </div>
-                <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Sécurité') }}</h2>
-                    <p class="leading-relaxed text-base">La sécurité d'une entité (objet, personne, entité politique, juridique, intellectuelle, écologique..., informatique) s'envisage individuellement ou collectivement, soit comme objectif (objectif de sécurité), en tant que droit (droit à la sécurité), en tant que valeur (la sécurité est la première des libertés), en tant qu'état de ce qui est sécurisé, en tant que fonction ou d'activité qui vise à sécuriser cette entité ; face à des risques et/ou à des menaces (ces deux notions n'étant pas réductibles l'une à l'autre).</p>
 
-                </div>
-            </div>
-            <div class="flex flex-col mb-10 lg:items-start items-center">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                </div>
-                <div class="flex-grow">
-                    <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Gardiennage') }}</h2>
-                    <p class="leading-relaxed text-base">Le gardiennage consiste en un service de surveillance humaine (par opposition à un système de surveillance électronique) assuré par des agents de sécurité. Ces derniers ont principalement pour mission de protéger des locaux, des personnes, et des biens. Il existe différents types d’agents de sécurité ayant chacun leurs spécificités : Agent de Prévention et Sécurité (APS), agent évènementiel, agent incendie, rondier intervenant, agent cynophile (ou maître-chien).</p>
+            <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Nettoyage') }}</h2>
+                        <p class="leading-relaxed text-base"> Service de nettoyages :
+                            <br> - Nettoyage de bureaux et surfaces commerciales
+                            <br> - Nettoyage des copropriétés
+                            <br> - Nettoyage des vitres
+                            <br> - Nettoyage des façades
+                            <br> - Nettoyage fin de chantier
+                            <br> - Nettoyage fin travaux ou occasionnels
+                            <br> - Sortie des conteneurs (poubelles)
+                            <br> - Nettoyage des cantonnements (bungalows)
+                            <br> - Débarras
+                            <br> - Traitement des sols.</p>
 
+                    </div>
+                </div>
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <circle cx="6" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Sécurité') }}</h2>
+                        <p class="leading-relaxed text-base">La sécurité d'une entité (objet, personne, entité politique, juridique, intellectuelle, écologique..., informatique) s'envisage individuellement ou collectivement, soit comme objectif (objectif de sécurité), en tant que droit (droit à la sécurité), en tant que valeur (la sécurité est la première des libertés), en tant qu'état de ce qui est sécurisé, en tant que fonction ou d'activité qui vise à sécuriser cette entité ; face à des risques et/ou à des menaces (ces deux notions n'étant pas réductibles l'une à l'autre).</p>
+
+                    </div>
+                </div>
+                <div class="flex flex-col mb-10 lg:items-start items-center">
+                    <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ __('Gardiennage') }}</h2>
+                        <p class="leading-relaxed text-base">Le gardiennage consiste en un service de surveillance humaine (par opposition à un système de surveillance électronique) assuré par des agents de sécurité. Ces derniers ont principalement pour mission de protéger des locaux, des personnes, et des biens. Il existe différents types d’agents de sécurité ayant chacun leurs spécificités : Agent de Prévention et Sécurité (APS), agent évènementiel, agent incendie, rondier intervenant, agent cynophile (ou maître-chien).</p>
+
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 </body>
@@ -158,5 +162,9 @@
             </div>
 
     </div>
+
+
 </footer>
+<div class="pt-4 pt-6 mt-10 text-center bg-indigo-900 text-gray-400 border-t border-gray-100">© 2021 E-Gard. All rights
+    reserved.</div>
 </html>
